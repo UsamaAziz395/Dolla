@@ -10,22 +10,16 @@ const CommunityCard = () => {
 
       {/* Brown Background Shape */}
       <div
-        className="absolute inset-0 bg-[#5A3E29] rounded-[30px] md:rounded-[35px]"
-        style={{
-          clipPath: 'polygon(0 0, 100% 0, 100% 10%, 90% 100%, 0 100%)',
-          borderRadius: '35px'
-        }}
+        className="absolute inset-0 bg-[#5A3E29] rounded-[25px] sm:rounded-[30px] md:rounded-none [clip-path:none] md:[clip-path:polygon(0_0,100%_0,100%_10%,90%_100%,0_100%)]"
       />
 
       {/* Left Side Image */}
       <div className="relative w-full md:w-[35%] flex justify-center md:justify-start z-20 mb-3 md:mb-0 md:-ml-16">
-
         <img
           src={character}
           alt="Money Character"
           className="w-40 sm:w-44 md:w-[200px] h-auto object-contain drop-shadow-2xl"
         />
-
       </div>
 
       {/* Right Side Content */}
@@ -47,7 +41,6 @@ const CommunityCard = () => {
 
         {/* Social Links */}
         <div className="flex items-center gap-3">
-
           {communityData.socialLinks.map((link) => {
             const Icon = link.icon;
 
@@ -62,7 +55,6 @@ const CommunityCard = () => {
               </Link>
             );
           })}
-
         </div>
 
       </div>
